@@ -1,0 +1,22 @@
+.button {
+  margin-top: 30px;
+  background: $white;
+  border: 0;
+  color: $black;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-family: "Droid Serif", serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 0 5px $brown;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background: $red;
+    color: $white;
+  }
+}

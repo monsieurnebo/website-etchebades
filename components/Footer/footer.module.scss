@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 15px;
+  text-align: center;
+}
+
+.footer__proposal {
+  opacity: 0.5;
+  color: $white;
+  text-decoration: none;
+  font-size: 10px;
+  margin-bottom: 10px;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.footer__credit {
+  opacity: 0.5;
+  color: $white;
+  text-decoration: none;
+  font-size: 10px;
+
+  &__heart {
+    color: $red;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

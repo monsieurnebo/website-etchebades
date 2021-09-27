@@ -1,0 +1,21 @@
+.layout {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.title {
+  color: $white;
+  font-size: 50px;
+  text-shadow: 0 0 5px $brown;
+  text-align: center;
+}

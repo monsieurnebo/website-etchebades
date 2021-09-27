@@ -1,0 +1,32 @@
+.quote__text {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  color: $white;
+  font-size: 20px;
+  text-shadow: 0 0 5px $brown;
+  font-style: italic;
+  text-align: center;
+
+  &::before,
+  &::after {
+    color: $white;
+  }
+
+  &::before {
+    content: "« ";
+  }
+
+  &::after {
+    content: " »";
+  }
+}
+
+.quote__meta {
+  color: $white;
+  font-size: 14px;
+  text-shadow: 0 0 5px $brown;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.5;
+}
