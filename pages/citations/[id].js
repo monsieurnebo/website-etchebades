@@ -3,7 +3,9 @@ import Head from "next/head";
 import Quote from "../../components/Quote/Quote";
 import NewQuoteButton from "../../components/NewQuoteButton/NewQuoteButton";
 import Layout from "../../components/Layout/Layout";
-import quotes from "../../content/quotes";
+import quotes from "../../quotes/quotes";
+import getQuote from "../../quotes/getQuote";
+import getRandomQuote from "../../quotes/getRandomQuote";
 
 export async function getStaticPaths() {
   const paths = quotes.map((quote, index) => {
@@ -32,7 +34,7 @@ export async function getStaticProps(context) {
 }
 
 export default function Home({ quoteIndex }) {
-  const quote = quotes[quoteIndex];
+  const quote = getQuote(quoteIndex);
 
   return (
     <Layout>

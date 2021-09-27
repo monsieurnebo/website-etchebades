@@ -1,10 +1,11 @@
 import NextLink from "next/link";
-import quotes from "../../content/quotes";
+import getRandomQuote from "../../quotes/getRandomQuote";
 import styles from "./newquotebutton.module.scss";
 
 export default function NewQuoteButton() {
-  const randomQuoteIndex = Math.floor(Math.random() * quotes.length);
-  const randomQuoteSlug = `/citations/${randomQuoteIndex}`;
+  const randomQuote = getRandomQuote();
+  const randomQuoteId = randomQuote.id;
+  const randomQuoteSlug = `/citations/${randomQuoteId}`;
 
   return (
     <NextLink href={randomQuoteSlug} passHref>

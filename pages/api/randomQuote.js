@@ -1,8 +1,7 @@
-import quotes from "../../content/quotes";
+import getRandomQuote from "../../quotes/getRandomQuote";
 
 export default function handler(req, res) {
-  const randomQuoteIndex = Math.floor(Math.random() * quotes.length);
-  const quote = quotes[randomQuoteIndex];
+  const quote = getRandomQuote();
 
   res.status(200).json({ quote });
 }

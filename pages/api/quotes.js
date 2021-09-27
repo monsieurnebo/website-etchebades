@@ -1,6 +1,6 @@
 import Cors from "cors";
 import initMiddleware from "../../lib/initMiddleware";
-import quotes from "../../content/quotes";
+import quotes from "../../quotes/quotes";
 
 // Initialize the cors middleware
 const cors = initMiddleware(
