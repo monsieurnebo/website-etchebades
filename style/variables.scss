@@ -4,3 +4,9 @@ $black: #111;
 $brown: #333;
 $white: #fff;
 $red: #f44336;
+
+@mixin desktop-breakpoint() {
+  @media (min-width: 800px) {
+    @content;
+  }
+}

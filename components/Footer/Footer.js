@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./footer.module.scss";
 
 export default function Footer() {
@@ -5,17 +6,21 @@ export default function Footer() {
     <footer className={styles.footer}>
       <a
         href="mailto:contact@cyrilbonnet.fr?subject=Une nouvelle etchebade"
-        className={styles.footer__proposal}
+        className={styles.footer__link}
       >
         Proposer une etchebade
       </a>
-      <a
-        href="http://cyrilbonnet.fr"
-        target="_blank"
-        className={styles.footer__credit}
-        rel="noreferrer"
+      <Link
+        href="/mentions-legales"
+        passHref
       >
-        Made with <span className={styles.footer__credit__heart}>❤</span> from Strasbourg
+        <a className={styles.footer__link}>Mentions légales</a>
+      </Link>
+      <a
+        href="https://twitter.com/etchebades"
+        className={styles.footer__link}
+      >
+        Recevez vos citations sur Twitter
       </a>
     </footer>
   );

@@ -11,6 +11,18 @@ body {
   font-family: 'Droid Serif', serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem; /* =14px */
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}
+
 blockquote {
   margin: 0;
 }

@@ -14,9 +14,14 @@
 }
 
 .title__link {
-  font-size: 50px;
+  display: block;
+  font-size: 4rem;
   text-shadow: 0 0 5px $brown;
   text-align: center;
   color: $white;
   text-decoration: none;
+
+  @include desktop-breakpoint {
+    font-size: 5rem;
+  }
 }
