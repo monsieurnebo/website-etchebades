@@ -13,9 +13,10 @@
   background-position: center center;
 }
 
-.title {
-  color: $white;
+.title__link {
   font-size: 50px;
   text-shadow: 0 0 5px $brown;
   text-align: center;
+  color: $white;
+  text-decoration: none;
 }
