@@ -1,8 +1,9 @@
 import quotes from "./quotes";
 
 /**
- * The id is in fact the INDEX
- * TODO: refactor id => index everywhere
+ * Get a quote based on its index
+ * @param {number} index
+ * @returns {object} quote
  */
 export default function getQuote(index) {
   return quotes[index];

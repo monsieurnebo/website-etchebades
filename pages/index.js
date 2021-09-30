@@ -1,12 +1,29 @@
 import React from "react";
 import Head from "next/head";
 import Quote from "../components/Quote/Quote";
-import NewQuoteButton from "../components/NewQuoteButton/NewQuoteButton";
+import Button from "../components/Button/Button";
 import Layout from "../components/Layout/Layout";
 import getRandomQuote from "../quotes/getRandomQuote";
 
+// Make sure that the next quote is not the same as the current one
+function getNextQuote(currentQuoteIndex) {
+  const nextQuote = getRandomQuote();
+  const nextQuoteIndex = nextQuote.index;
+
+  if (nextQuoteIndex === currentQuoteIndex) {
+    console.log("Next quote is the same as current one !");
+
+    return getNextQuote(currentQuoteIndex);
+  } else {
+    return nextQuote;
+  }
+}
+
 export default function Home() {
   const quote = getRandomQuote();
+  const quoteIndex = quote.index;
+  const nextQuote = getNextQuote(quoteIndex);
+  const randomQuoteSlug = `/citations/${nextQuote.index}`;
 
   return (
     <Layout>
@@ -16,7 +33,7 @@ export default function Home() {
       </Head>
 
       <Quote quote={quote} />
-      <NewQuoteButton />
+      <Button href={randomQuoteSlug} />
     </Layout>
   );
 }

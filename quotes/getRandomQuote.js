@@ -5,7 +5,7 @@ export default function getRandomQuote() {
   const randomQuote = quotes[randomQuoteIndex];
   return {
     ...randomQuote,
-    id : randomQuoteIndex
+    index : randomQuoteIndex
   };
 }
 
