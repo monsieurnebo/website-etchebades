@@ -14,8 +14,8 @@ export default function Legal() {
       <p className={text}>
         Ce site a été développé par : <a className={link} href="https://cyrilbonnet.fr/" target="_blank" rel="noreferrer">Cyril BONNET, Webmaster Freelance Strasbourg, création site internet & SEO</a>.
       </p>
-      <h2 className={subtitle}>Droits d'auteur</h2>
-      <p className={text}>Photographie de Philippe Etchebest par © M6 (ce site n'a aucun but lucratif, pas taper SVP).</p>
+      <h2 className={subtitle}>{"Droits d'auteur"}</h2>
+      <p className={text}>{"Photographie de Philippe Etchebest par © M6 (ce site n'a aucun but lucratif, pas taper SVP)."}</p>
     </div>
   );
 }
