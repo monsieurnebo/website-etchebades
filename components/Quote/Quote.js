@@ -20,7 +20,7 @@ function Quote({ quote }) {
 
   return (
     <div>
-      <quote className={styles.quote__text}>{text}</quote>
+      <blockquote className={styles.quote__text}>{text}</blockquote>
       <Meta season={season} episode={episode} city={city} />
     </div>
   );
