@@ -1,7 +1,23 @@
-import PropTypes from "prop-types";
 import styles from "./quote.module.scss";
 
-function Meta({ season, episode, city }) {
+type MetaProps = {
+  season?: number,
+  episode?: number,
+  city?: string
+};
+
+type Quote = {
+  text: string,
+  season?: number,
+  episode?: number,
+  city?: string
+}
+
+type QuoteProps = {
+  quote: Quote
+};
+
+function Meta({ season, episode, city }: MetaProps): JSX.Element {
   if (!season || !episode || !city) {
     return null;
   }
@@ -15,7 +31,7 @@ function Meta({ season, episode, city }) {
   );
 }
 
-function Quote({ quote }) {
+export default function Quote({ quote }: QuoteProps): JSX.Element {
   const { text, season, episode, city } = quote;
 
   return (
@@ -25,14 +41,3 @@ function Quote({ quote }) {
     </div>
   );
 }
-
-Quote.propTypes = {
-  quote : PropTypes.shape({
-    text : PropTypes.string.isRequired,
-    season : PropTypes.number,
-    episode : PropTypes.number,
-    city : PropTypes.string
-  })
-};
-
-export default Quote;

@@ -6,7 +6,7 @@ import Layout from "../components/Layout/Layout";
 import getRandomQuote from "../quotes/getRandomQuote";
 
 // Make sure that the next quote is not the same as the current one
-function getNextQuote(currentQuoteIndex) {
+function getNextQuote(currentQuoteIndex: number) {
   const nextQuote = getRandomQuote();
   const nextQuoteIndex = nextQuote.index;
 
@@ -19,7 +19,7 @@ function getNextQuote(currentQuoteIndex) {
   }
 }
 
-export default function Home() {
+export default function Home(): JSX.Element {
   const quote = getRandomQuote();
   const quoteIndex = quote.index;
   const nextQuote = getNextQuote(quoteIndex);
