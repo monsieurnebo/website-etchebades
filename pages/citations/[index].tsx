@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+import { GetStaticProps, GetStaticPaths } from "next";
 import PageMeta from "../../components/PageMeta";
 import Quote from "../../components/Quote/Quote";
 import Button from "../../components/Button/Button";
@@ -8,7 +8,7 @@ import quotes from "../../quotes/quotes";
 import getQuote from "../../quotes/getQuote";
 import getRandomQuote from "../../quotes/getRandomQuote";
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = quotes.map((quote, index) => {
     return {
       params : {
@@ -21,9 +21,9 @@ export async function getStaticPaths() {
     paths,
     fallback : false
   };
-}
+};
 
-export async function getStaticProps(context) {
+export const getStaticProps: GetStaticProps = async (context) => {
   const { params } = context;
   const quoteIndex = parseInt(params.index, 10); // Make it as a number
 
@@ -32,10 +32,10 @@ export async function getStaticProps(context) {
       quoteIndex
     }
   };
-}
+};
 
 // Make sure that the next quote is not the same as the current one
-function getNextQuote(currentQuoteIndex) {
+function getNextQuote(currentQuoteIndex: number) {
   const nextQuote = getRandomQuote();
   const nextQuoteIndex = nextQuote.index;
 
@@ -48,7 +48,11 @@ function getNextQuote(currentQuoteIndex) {
   }
 }
 
-export default function Home({ quoteIndex }) {
+type HomeProps = {
+  quoteIndex : number
+};
+
+export default function Home({ quoteIndex }: HomeProps): JSX.Element {
   const quote = getQuote(quoteIndex);
   const nextQuote = getNextQuote(quoteIndex);
   const randomQuoteSlug = `/citations/${nextQuote.index}`;

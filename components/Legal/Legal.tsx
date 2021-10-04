@@ -1,6 +1,6 @@
 import styles from "./legal.module.scss";
 
-export default function Legal() {
+export default function Legal(): JSX.Element {
   const { title, subtitle, text, link } = styles;
   return (
     <div>

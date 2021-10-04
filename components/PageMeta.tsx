@@ -1,5 +1,4 @@
 import Head from "next/head";
-import PropTypes from "prop-types";
 
 const DEFAULT_META = {
   title : "Citations de Philippe Etchebest - Les Etchebades",
@@ -7,7 +6,13 @@ const DEFAULT_META = {
   imageUrl : "https://etchebades.fr/social-share.jpg"
 };
 
-function PageMeta(props) {
+type PageMetaProps = {
+  title: string,
+  description?: string,
+  imageUrl?: string,
+};
+
+export default function PageMeta(props: PageMetaProps): JSX.Element {
   let { title, description, imageUrl } = props || {};
 
   if (!title) {
@@ -38,11 +43,3 @@ function PageMeta(props) {
     </Head>
   );
 }
-
-PageMeta.propTypes = {
-  title : PropTypes.string,
-  description : PropTypes.string,
-  imageUrl : PropTypes.string,
-};
-
-export default PageMeta;

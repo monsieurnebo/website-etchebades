@@ -2,7 +2,11 @@ import Link from "next/link";
 import Footer from "../Footer/Footer";
 import styles from "./layout.module.scss";
 
-export default function Layout({ children }) {
+type LayoutProps = {
+  children : JSX.Element
+};
+
+export default function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <div className={styles.layout}>
       <h1>

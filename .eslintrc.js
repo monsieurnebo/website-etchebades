@@ -5,13 +5,16 @@ module.exports = {
     node : true
   },
   parserOptions : {
-    parser : "@babel/eslint-parser",
+    parser : "@typescript-eslint/parser",
     requireConfigFile : false
   },
-  extends : [
-    "next"
+  plugins: [
+    "@typescript-eslint"
   ],
-  plugins : [
+  extends : [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next"
   ],
   // add your custom rules here
   rules : {

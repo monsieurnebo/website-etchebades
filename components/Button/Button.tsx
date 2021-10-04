@@ -1,8 +1,11 @@
 import NextLink from "next/link";
-import PropTypes from "prop-types";
 import styles from "./button.module.scss";
 
-function Button({ href}) {
+type ButtonProps = {
+  href: string
+};
+
+function Button({ href }: ButtonProps): JSX.Element {
 
   return (
     <NextLink href={href} passHref>
@@ -12,10 +15,6 @@ function Button({ href}) {
     </NextLink>
   );
 }
-
-Button.propTypes = {
-  href : PropTypes.string.isRequired
-};
 
 export default Button;
 
