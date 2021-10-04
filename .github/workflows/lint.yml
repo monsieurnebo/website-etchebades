@@ -1,0 +1,25 @@
+name: lint
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Lint
+        id: Lint
+        run: npm run lint
+
+      - name: Build
+        id: build
+        run: npm run build
