@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "next dev -p 8080",
+    "bootstrap": "./scripts/clean.sh && npm install",
     "build": "next build",
     "serve": "next start",
     "lint": "npm run lint:js && npm run lint:style",
