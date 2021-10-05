@@ -27,9 +27,11 @@ export default function Home(): JSX.Element {
 
   return (
     <Layout>
-      <PageMeta />
-      <Quote quote={quote} />
-      <Button href={randomQuoteSlug} />
+      <React.Fragment>
+        <PageMeta />
+        <Quote quote={quote} />
+        <Button href={randomQuoteSlug} />
+      </React.Fragment>
     </Layout>
   );
 }
