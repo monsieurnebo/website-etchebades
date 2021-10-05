@@ -7,7 +7,7 @@ const DEFAULT_META = {
 };
 
 type PageMetaProps = {
-  title: string,
+  title?: string,
   description?: string,
   imageUrl?: string,
 };

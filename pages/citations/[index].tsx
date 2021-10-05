@@ -1,5 +1,5 @@
 import React from "react";
-import { GetStaticProps, GetStaticPaths } from "next";
+import { GetStaticProps, GetStaticPaths, GetStaticPropsContext } from "next";
 import PageMeta from "../../components/PageMeta";
 import Quote from "../../components/Quote/Quote";
 import Button from "../../components/Button/Button";
@@ -23,9 +23,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
   const { params } = context;
-  const quoteIndex = parseInt(params.index, 10); // Make it as a number
+  // See https://stackoverflow.com/a/63884522/2289873
+  const index = Array.isArray(params.index) ? params.index[0] : params.index;
+  const quoteIndex = parseInt(index, 10); // Make it as a number
 
   return {
     props : {
@@ -59,12 +61,14 @@ export default function Home({ quoteIndex }: HomeProps): JSX.Element {
 
   return (
     <Layout>
-      <PageMeta
-        description={`"${quote.text}"`}
-      />
+      <React.Fragment>
+        <PageMeta
+          description={`"${quote.text}"`}
+        />
 
-      <Quote quote={quote} />
-      <Button href={randomQuoteSlug} />
+        <Quote quote={quote} />
+        <Button href={randomQuoteSlug} />
+      </React.Fragment>
     </Layout>
   );
 }
