@@ -6,11 +6,8 @@ type MetaProps = {
   city?: string
 };
 
-type Quote = {
-  text: string,
-  season?: number,
-  episode?: number,
-  city?: string
+type Quote = MetaProps & {
+  text: string
 }
 
 type QuoteProps = {
