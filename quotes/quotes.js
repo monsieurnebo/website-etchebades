@@ -141,6 +141,18 @@ const quotes = [
     episode : 1
   }, {
     text : "Ce n'est pas un cuisinier Patrick, c'est un ouvre-boîtes"
+  }, {
+    text : "Mets tes loupes et dis-moi combien de salades !",
+    city : "Alixan",
+    episodeId : 63,
+    season : 11,
+    episode : 4
+  }, {
+    text : "Steven, tu la remues ta mère ou j'vais l'faire !",
+    city : "Alixan",
+    episodeId : 63,
+    season : 11,
+    episode : 4
   }
 ];
 
