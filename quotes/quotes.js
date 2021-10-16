@@ -153,6 +153,12 @@ const quotes = [
     episodeId : 63,
     season : 11,
     episode : 4
+  }, {
+    text : "Ça sent la naphtaline... C'est pour pas dire que ça sent le vieux !",
+    city : "Antibes",
+    episodeId : 58,
+    season : 10,
+    episode : 2
   }
 ];
 
