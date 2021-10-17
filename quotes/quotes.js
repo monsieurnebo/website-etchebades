@@ -159,6 +159,12 @@ const quotes = [
     episodeId : 58,
     season : 10,
     episode : 2
+  }, {
+    text : "J'ai l'impression qu'on est dans une taverne où je n'ai que des frères. Ils sont tous chauves à barbe... C'est la famille !",
+    city : "Saint-Estèphe",
+    episodeId : 59,
+    season : 10,
+    episode : 3
   }
 ];
 
