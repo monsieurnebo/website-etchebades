@@ -165,6 +165,18 @@ const quotes = [
     episodeId : 59,
     season : 10,
     episode : 3
+  }, {
+    text : "Là faut pas une journée pour nettoyer... Faut tour raser !",
+    city : "Montpellier",
+    episodeId : 56,
+    season : 9,
+    episode : 6
+  }, {
+    text : "Je suis perdu... Entre un plat marocain, dans un resto mexicain, le tout à Dunkerque.",
+    city : "Dunkerque",
+    episodeId : 53,
+    season : 9,
+    episode : 3
   }
 ];
 
