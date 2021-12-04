@@ -1,6 +1,7 @@
 .button {
   margin-top: 30px;
-  background: lighten($red, 5%);
+  // stylelint-disable-next-line scss/no-global-function-names
+  background: lighten($red, 5%);  // TODO: use adjust() instead of lighten
   border: 0;
   color: $white;
   padding: 15px 30px;
