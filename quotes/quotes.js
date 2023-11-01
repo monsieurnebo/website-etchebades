@@ -177,6 +177,12 @@ const quotes = [
     episodeId : 53,
     season : 9,
     episode : 3
+  }, {
+    text : "Je ne sais pas s'il y a une Champions League qui existe pour les amateurs, mais si c'est le cas, elle est pour eux !",
+    city : "Saint-Berthevin",
+    episodeId : 75,
+    season : 11,
+    episode : 15
   }
 ];
 
