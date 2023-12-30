@@ -7,7 +7,7 @@
     "npm": ">=8.1.2"
   },
   "scripts": {
-    "start": "next dev -p 8080",
+    "dev": "next dev",
     "bootstrap": "./scripts/clean.sh && npm install",
     "build": "next build",
     "serve": "next start",
@@ -18,24 +18,22 @@
     "lint:js-fix": "next lint --fix",
     "lint:style": "stylelint \"**/*.{scss,css}\" --ignore-path .gitignore",
     "lint:style-fix": "npm run lint:style -- --fix",
+    "start": "next start",
     "validate": "npm run lint && npm run compile"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "next": "^12.0.6",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sass": "^1.44.0"
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "@types/react": "^17.0.37",
-    "@typescript-eslint/eslint-plugin": "^5.5.0",
-    "@typescript-eslint/parser": "^5.5.0",
-    "eslint": "^8.4.0",
-    "eslint-config-next": "^12.0.6",
-    "stylelint": "^14.1.0",
-    "stylelint-config-standard": "^24.0.0",
-    "stylelint-config-standard-scss": "^3.0.0",
-    "typescript": "^4.5.2"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "sass": "^1.69.6",
+    "typescript": "^5"
   }
 }

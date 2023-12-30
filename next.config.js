@@ -1,10 +1,9 @@
-module.exports = {
-  distDir : "dist",
-  sassOptions : {
-    // Prepend style before entry point
-    // see https://github.com/vercel/next.js/pull/12277
-    prependData : `
-      @import "./style/variables.scss";
-    `
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  sassOptions: {
+    prependData: `@use "~/styles/variables.scss" as *;`,
+
   }
-};
+}
+
+module.exports = nextConfig

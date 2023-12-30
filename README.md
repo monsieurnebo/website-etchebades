@@ -13,8 +13,8 @@
 $ nvm use
 $ npm install
 
-# serve with hot reload at localhost:8080
-$ npm run start
+# serve with hot reload at localhost:3000
+$ npm run dev
 
 # generate static project
 $ npm run build

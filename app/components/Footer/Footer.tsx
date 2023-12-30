@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./footer.module.scss";
 
-export default function Footer(): JSX.Element {
+export default function Footer() {
   return (
     <footer className={styles.footer}>
       <a
@@ -11,16 +11,16 @@ export default function Footer(): JSX.Element {
         Proposer une etchebade
       </a>
       <Link
+        className={styles.footer__link}
         href="/mentions-legales"
-        passHref
       >
-        <a className={styles.footer__link}>Mentions légales</a>
+        Mentions légales
       </Link>
       <a
-        href="https://twitter.com/etchebades"
+        href="https://bot.etchebades.fr"
         className={styles.footer__link}
       >
-        Recevez vos citations sur Twitter
+        Discutez avec l&apos;Etchebot
       </a>
     </footer>
   );

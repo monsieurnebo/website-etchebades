@@ -1,3 +1,4 @@
+// TODO: to be deleted once moved to "layout.tsx"
 import Head from "next/head";
 
 const DEFAULT_META = {
@@ -12,7 +13,7 @@ type PageMetaProps = {
   imageUrl?: string,
 };
 
-export default function PageMeta(props: PageMetaProps): JSX.Element {
+export default function PageMeta(props: PageMetaProps) {
   let { title, description, imageUrl } = props || {};
 
   if (!title) {

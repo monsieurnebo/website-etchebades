@@ -1,5 +1,6 @@
-import quotes from "./quotes";
+import quotes from "../data/quotes";
 
+// TODO: make it a global type
 type Quote = {
   text: string,
   city?: string,
@@ -13,7 +14,7 @@ type Quote = {
  * @param {number} index
  * @returns {object} quote
  */
-export default function getQuote(index: number) : Quote {
+export default function getQuoteFromIndex(index: number) : Quote {
   return quotes[index];
 }
 

@@ -14,7 +14,7 @@ type QuoteProps = {
   quote: Quote
 };
 
-function Meta({ season, episode, city }: MetaProps): JSX.Element {
+function Meta({ season, episode, city }: MetaProps) {
   if (!season || !episode || !city) {
     return null;
   }
@@ -28,7 +28,7 @@ function Meta({ season, episode, city }: MetaProps): JSX.Element {
   );
 }
 
-export default function Quote({ quote }: QuoteProps): JSX.Element {
+export default function Quote({ quote }: QuoteProps) {
   const { text, season, episode, city } = quote;
 
   return (

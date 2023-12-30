@@ -1,5 +1,6 @@
-import quotes from "./quotes";
+import quotes from "../data/quotes";
 
+// TODO: make it a global type
 type Quote = {
   text: string,
   city?: string,

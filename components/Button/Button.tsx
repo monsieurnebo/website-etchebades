@@ -1,18 +1,20 @@
-import NextLink from "next/link";
+import Link from "next/link";
 import styles from "./button.module.scss";
 
 type ButtonProps = {
   href: string
 };
 
-function Button({ href }: ButtonProps): JSX.Element {
+function Button({ href }: ButtonProps) {
 
   return (
-    <NextLink href={href} passHref>
-      <a className={styles.button} title="Lire une nouvelle citation">
-        Une autre
-      </a>
-    </NextLink>
+    <Link
+      className={styles.button}
+      href={href}
+      title="Lire une nouvelle citation"
+    >
+      Une autre
+    </Link>
   );
 }
 
