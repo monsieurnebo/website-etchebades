@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif");
-
 $black: #111;
 $brown: #333;
 $white: #fff;
 $red: #f44336;
 
 @mixin desktop-breakpoint() {
-  @media (min-width: 800px) {
+  @media (width >= 800px) {
     @content;
   }
 }
