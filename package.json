@@ -22,6 +22,7 @@
     "validate": "npm run lint && npm run compile"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.1",
     "cors": "^2.8.5",
     "next": "14.0.4",
     "react": "^18",

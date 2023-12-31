@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next'
 import { Noto_Serif } from 'next/font/google'
 
@@ -36,6 +37,7 @@ export default function RootLayout({
             </Link>
           </h1>
           {children}
+          <Analytics />
           <Footer />
         </div>
       </body>
