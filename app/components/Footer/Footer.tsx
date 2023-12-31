@@ -20,7 +20,7 @@ export default function Footer() {
         href="https://bot.etchebades.fr"
         className={styles.footer__link}
       >
-        Discutez avec l&apos;Etchebot
+        Discuter avec l&apos;Etchebot
       </a>
     </footer>
   );
