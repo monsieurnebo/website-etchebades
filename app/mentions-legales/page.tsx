@@ -8,9 +8,10 @@ export default function LegalPage() {
       <h1 className={title}>Mentions légales</h1>
       <h2 className={subtitle}>Hébergement</h2>
       <ul className={text}>
-        <li>Netlify, Inc.</li>
-        <li>2325 3rd Street, Suite 215, San Francisco, California 94107</li>
-        <li><a className={link} href="mailto:support@netlify.com">support@netlify.com</a></li>
+        <li>Vercel Inc.</li>
+        <li>440 N Barranca Ave #4133</li>
+        <li>Covina, CA 91723</li>
+        <li><a className={link} href="mailto:contact@vercel.com">contact@vercel.com</a></li>
       </ul>
       <p className={text}>
         Ce site a été développé par : <a className={link} href="https://cyrilbonnet.fr/" target="_blank" rel="noreferrer">Cyril BONNET</a>.
