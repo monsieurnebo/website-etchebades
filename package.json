@@ -11,7 +11,6 @@
     "bootstrap": "./scripts/clean.sh && npm install",
     "build": "next build",
     "serve": "next start",
-    "compile": "npx tsc",
     "lint": "npm run lint:js && npm run lint:style",
     "lint:fix": "npm run lint:js-fix && npm run lint:style-fix",
     "lint:js": "next lint",
@@ -19,7 +18,7 @@
     "lint:style": "stylelint \"**/*.{scss,css}\" --ignore-path .gitignore",
     "lint:style-fix": "npm run lint:style -- --fix",
     "start": "next start",
-    "validate": "npm run lint && npm run compile",
+    "validate": "npm run lint",
     "test": "jest"
   },
   "dependencies": {

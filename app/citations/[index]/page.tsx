@@ -34,6 +34,16 @@ export default function SingleQuote({ params }: { params: { index: string } }) {
   const index = Number(params.index)
 
   const quote = getQuoteFromIndex(index);
+
+  // TODO: create a nice error UI
+  if (!quote) {
+    return (
+      <p>
+        Oups, impossible de trouver la citation !
+      </p>
+    )
+  }
+
   const nextQuote = getNextQuote(index);
   const randomQuoteSlug = `/citations/${nextQuote.index}`;
 
