@@ -13,6 +13,7 @@ type Quote = {
 export default function getRandomQuote(): Quote {
   const randomQuoteIndex = Math.floor(Math.random() * quotes.length);
   const randomQuote = quotes[randomQuoteIndex];
+
   return {
     ...randomQuote,
     index : randomQuoteIndex

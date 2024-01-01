@@ -14,7 +14,13 @@ type Quote = {
  * @param {number} index
  * @returns {object} quote
  */
-export default function getQuoteFromIndex(index: number) : Quote {
-  return quotes[index];
+export default function getQuoteFromIndex(index: number): Quote | null {
+  const res = quotes[index];
+
+  if (!res) {
+    return null
+  }
+
+  return res
 }
 
