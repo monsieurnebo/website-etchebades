@@ -19,3 +19,10 @@ $ npm run dev
 # generate static project
 $ npm run build
 ```
+
+## Tests
+
+```bash
+# run unit tests (Jest)
+$ npm run test
+```
